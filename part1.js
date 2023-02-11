@@ -1,0 +1,11 @@
+const fs = require('fs');
+// fs.mkdirSync('Part1');
+fs.writeFileSync('Part1/test.txt', '04071913025');
+let regNo = fs.readFileSync('Part1/test.txt', 'utf-8');
+console.log("Registration No = "+regNo);
+regNo = regNo.substring(7);
+fs.writeFileSync('Part1/test.txt', regNo);
+regNo = fs.readFileSync('Part1/test.txt', 'utf-8');
+console.log("Registration No = "+regNo);
+fs.writeFileSync('Part1/test.txt', '');
+fs.writeFileSync('Part1/test.txt', '04071913025');
